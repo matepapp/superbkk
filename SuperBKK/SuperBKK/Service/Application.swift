@@ -16,6 +16,7 @@ class Application {
         application: self
     )
     lazy var network = Network()
+    lazy var mapManager = MapManager()
     
     init(window: UIWindow) {
         self.window = window

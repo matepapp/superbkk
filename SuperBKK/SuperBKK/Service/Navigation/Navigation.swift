@@ -24,7 +24,8 @@ class Navigation {
     }
     
     private func showStopsList() {
-        let viewModel = StopsViewModel(dataProvider: application.network)
+        let viewModel = StopsViewModel(dataProvider: application.network,
+                                       mapManager: application.mapManager)
         
         viewModel.didSelectStop = { [weak self] stop in
             self?.showStop(stop: stop)

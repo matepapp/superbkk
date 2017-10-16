@@ -31,6 +31,8 @@
 		0975BB271F94BAE200F1AF1C /* StopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975BB261F94BAE200F1AF1C /* StopViewModel.swift */; };
 		0975BB2B1F94C0A300F1AF1C /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975BB291F94C0A300F1AF1C /* StopTableViewCell.swift */; };
 		0975BB2C1F94C0A300F1AF1C /* StopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0975BB2A1F94C0A300F1AF1C /* StopTableViewCell.xib */; };
+		0975BB2E1F94CAB700F1AF1C /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975BB2D1F94CAB700F1AF1C /* MapManager.swift */; };
+		0975BB301F94CBE500F1AF1C /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975BB2F1F94CBE500F1AF1C /* Coordinates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		0975BB261F94BAE200F1AF1C /* StopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopViewModel.swift; sourceTree = "<group>"; };
 		0975BB291F94C0A300F1AF1C /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
 		0975BB2A1F94C0A300F1AF1C /* StopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopTableViewCell.xib; sourceTree = "<group>"; };
+		0975BB2D1F94CAB700F1AF1C /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		0975BB2F1F94CBE500F1AF1C /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +238,8 @@
 		0965D65F1F94A89100ED09AF /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				0975BB2D1F94CAB700F1AF1C /* MapManager.swift */,
+				0975BB2F1F94CBE500F1AF1C /* Coordinates.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				0965D66F1F94A98C00ED09AF /* UIViewExtension.swift in Sources */,
 				0965D6651F94A8DC00ED09AF /* Network.swift in Sources */,
 				0965D67F1F94AC4C00ED09AF /* StopsDataProvider.swift in Sources */,
+				0975BB2E1F94CAB700F1AF1C /* MapManager.swift in Sources */,
 				0965D67D1F94ABCC00ED09AF /* StopsViewModel.swift in Sources */,
 				0965D6271F94A39F00ED09AF /* AppDelegate.swift in Sources */,
 				0965D6791F94AB9F00ED09AF /* StopsViewController.swift in Sources */,
@@ -463,6 +470,7 @@
 				0965D66D1F94A97200ED09AF /* NIBLoadable.swift in Sources */,
 				0965D6851F94AE4F00ED09AF /* Navigation.swift in Sources */,
 				0965D6631F94A8C100ED09AF /* Result.swift in Sources */,
+				0975BB301F94CBE500F1AF1C /* Coordinates.swift in Sources */,
 				0975BB2B1F94C0A300F1AF1C /* StopTableViewCell.swift in Sources */,
 				0965D6671F94A90500ED09AF /* API.swift in Sources */,
 				0965D6711F94A9AA00ED09AF /* UIViewControllerExtension.swift in Sources */,

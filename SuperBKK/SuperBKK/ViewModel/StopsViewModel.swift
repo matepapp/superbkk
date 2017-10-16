@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import CoreLocation
 
 class StopsViewModel {
     private var dataProvider: StopsDataProvider
+    private var mapManager: MapManager
     var stopsViewModel: [StopViewModel]?
     
     var didError: ((String) -> Void)?
@@ -18,9 +20,9 @@ class StopsViewModel {
     
     var title: String {
         if self.isUpdating {
-            return "Loading"
+            return "Loading..."
         } else {
-            return "Stops from Deak Ferenc"
+            return "Stops from Deak Ferenc square"
         }
     }
     
@@ -28,8 +30,9 @@ class StopsViewModel {
         didSet { self.didUpdate?(self) }
     }
     
-    init(dataProvider: StopsDataProvider) {
+    init(dataProvider: StopsDataProvider, mapManager: MapManager) {
         self.dataProvider = dataProvider
+        self.mapManager = mapManager
     }
     
     func getStopsData() {
@@ -40,7 +43,12 @@ class StopsViewModel {
             switch result {
             case .success(let stops):
                 unwrappedSelf.stopsViewModel = []
-                stops.forEach { self?.stopsViewModel?.append(StopViewModel(stop: $0)) }
+                
+                stops.filter {
+                    let coordinate = CLLocation(latitude: $0.lat, longitude: $0.lon)
+                    return unwrappedSelf.mapManager.isInZone(zone: 1000.0, from: Coordinates.deak, to: coordinate)
+                }.forEach { self?.stopsViewModel?.append(StopViewModel(stop: $0)) }
+                
                 unwrappedSelf.didUpdate?(unwrappedSelf)
             case .failure(let errorMessage):
                 unwrappedSelf.didError?(errorMessage)
