@@ -36,12 +36,6 @@ class Navigation {
     }
     
     private func showStop(stop: Stop) {
-//        let viewModel = FriendDetailViewModel(
-//            friend: friend,
-//            imageCache: self.application.imageCache
-//        )
-//        let instance = FriendDetailViewController(viewModel: viewModel)
-//        self.navigationController.pushViewController(instance, animated: true)
     }
 }
 
