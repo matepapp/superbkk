@@ -86,5 +86,7 @@ extension StopsViewController: UITableViewDataSource {
 }
 
 extension StopsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: - Implement navigation based on the selected StopViewModell
+    }
 }
